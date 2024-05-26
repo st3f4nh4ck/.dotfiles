@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=d4rkb4sh8@gmail.com
+Enabled=true
+Parent=95072ea9da04541855f670cb36a5071dd6cf1a4a
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=dfd7f4cf657e265296f8295822801ca61aed3bc6
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://3ee3eef542d90f4605087ef14fa3f6d75eb6a353/%5bGmail%5d/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=d4rkb4sh8@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none

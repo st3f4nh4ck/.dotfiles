@@ -1,0 +1,29 @@
+[Data Source]
+DisplayName=stefanmrobertson@gmail.com
+Enabled=true
+Parent=4f5e957a97b7d3c0851da74b10cc5a53b7d6cb54
+
+[Mail Submission]
+SentFolder=folder://local/Sent
+TransportUid=3647753d9b33dfef318c0f14162f0d3ce95f00b6
+RepliesToOriginFolder=false
+UseSentFolder=true
+
+[Mail Composition]
+Bcc=
+Cc=
+DraftsFolder=folder://c5c8a6b511f067bef6738c60460807ddf44446be/%5bGmail%5d/Drafts
+ReplyStyle=default
+SignImip=true
+TemplatesFolder=
+StartBottom=inconsistent
+TopSignature=inconsistent
+Language=
+
+[Mail Identity]
+Address=stefanmrobertson@gmail.com
+Aliases=
+Name=
+Organization=
+ReplyTo=
+SignatureUid=none
