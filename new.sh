@@ -13,6 +13,9 @@ install_apt_packages() {
 # Call function to install APT packages
 install_apt_packages
 
+# Ensure all APT packages are installed before proceeding
+sudo apt -y install stow figlet lynis gawk curl wget git alacritty powerline* nala fastfetch net-tools forensics-all cpufetch btop gnome-shell-extension-manager flatpak gnome-software-plugin-flatpak gh lolcat fd-find sd npm vlc build-essential procps file net-tools httpie mitmproxy gpaste-2 font-manager gdebi ufw gawk cmake plocate bat most libssl-dev libvips-dev libsixel-dev libchafa-dev libtbb-dev
+
 # Install Oh My Bash
 install_oh_my_bash() {
     # NOTE: It's recommended to download and inspect scripts before execution
