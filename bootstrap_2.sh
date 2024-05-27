@@ -39,7 +39,8 @@ install_repo
 # Install GDM Settings
 install_gdm_settings() {
     # Install Flatpak applications
-    sudo flatpak install -y io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors org.gnome.World.PikaBackup io.gitlab.zehkira.Monopho>
+   sudo flatpak install io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors org.gnome.World.PikaBackup io.gitlab.zehkira.Monophony io.github.mimbrero.WhatsAppDesktop org.chromium.Chromium org.gnome.Solanum org.qbittorrent.qBittorrent io.github.hvdwofl.jExifToolGUI com.belmoussaoui.Obfuscate net.sourceforge.Pdfedit
+
 }
 # Call function to install GDM Settings
 install_gdm_settings
@@ -54,14 +55,14 @@ install_snap_store() {
 # Call function to install Snap Store
 install_snap_store
 
-# Install VirtualBox
+# Function to install VirtualBox
 install_virtualbox() {
-    wget -O- https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmour -o /usr/share/keyrings/oracle_vbox_2016.gpg &&
-    echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bookworm contrib" | sud>
-    sudo apt update &&
-    sudo apt install virtualbox-7.0 -y
+        wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmour -o /usr/share/keyrings/oracle_vbox_2016.gpg
+        echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bookworm contrib" |sudo tee /etc/apt/sources.list.d/virtualbox.list
+        sudo apt update
+        sudo apt install virtualbox-7.0 -y
 }
-# Call function to install VirtualBox
+# Call function install virtualbox
 install_virtualbox
 
 # Install VBox Guest Extension
