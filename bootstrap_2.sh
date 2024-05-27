@@ -8,7 +8,7 @@ install_homebrew() {
 install_homebrew
 
 # Define Homebrew packages
-HOMEBREW_PACKAGES="gcc dust dog eza zellij neovim xh yazi ffmpegthumbnailer unar jq poppler fd ripgrep zoxide tlrc"
+HOMEBREW_PACKAGES="gcc dust dog eza zellij neovim xh yazi unar jq poppler ripgrep zoxide tlrc"
 
 # Function to install Homebrew packages
 install_homebrew_packages() {
