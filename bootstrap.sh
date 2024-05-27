@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env  bash
 
 # Configuration
-CONFIG_DIR="$HOME/.config/my-config"
-APT_PACKAGES="lynis gawk curl wget git alacritty powerline* nala neofetch net-tools forensics-all cpufetch btop gnome-shell-extension-manager flatpak gnome-software-plugin-flatpak gh git lolcat fd-find sd npm vlc build-essential procps file net-tools httpie mitmproxy gpaste-2 font-manager gdebi ufw gawk cmake plocate bat most libssl-dev libvips-dev libsixel-dev libchafa-dev libtbb-dev"
+CONFIG_DIR="$HOME/.dotfiles/.config"
+APT_PACKAGES="stow lynis gawk curl wget git alacritty powerline* nala fastfetch net-tools forensics-all cpufetch btop gnome-shell-extension-manager flatpak gnome-software-plugin-flatpak gh git lolcat fd-find sd npm vlc build-essential procps file net-tools httpie mitmproxy gpaste-2 font-manager gdebi ufw gawk cmake plocate bat most libssl-dev libvips-dev libsixel-dev libchafa-dev libtbb-dev"
 HOMEBREW_PACKAGES="gcc dust dog eza zellij neovim xh yazi ffmpegthumbnailer unar jq poppler fd ripgrep zoxide"
 
 # Function to install apt packages
 install_apt_packages() {
 	sudo apt update
-	sudo apt install -y $APT_PACKAGES
+	sudo apt install -y "$APT_PACKAGES"
 }
 
 # Function to install Homebrew packages
@@ -19,8 +19,7 @@ install_homebrew_packages() {
 }
 # Function to install oh-my-bash
 install_oh_my_bash() {
-	bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)" --prefix=/usr/local
-	cp /usr/local/share/oh-my-bash/bashrc ~/.bashrc
+	bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 }
 
 # Function to install ble.sh
@@ -30,10 +29,13 @@ install_ble_sh() {
 	echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
 }
 
-# Function to install Flatpak and Flathub
-install_flatpak() {
-	flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-}
+# Function to pull git repo                                                                  
+install_repo() {                                                                              
+  git clone https://github.com/st3f4nh4ck/.dotfiles.git > $HOME
+  rm -rf $HOME/.bashrc
+  stow $HOME/.dotfiles .
+
+}                                                                                               }
 
 # Function to install GDM Settings to change login wallpaper
 install_gdm_settings() {
@@ -78,12 +80,8 @@ install_themes() {
 	git clone https://github.com/vinceliuice/Tela-icon-theme.git
 	cd Tela-icon-theme
 	./install.sh
-	cd $HOME/Downloads
-	curl it clone https://github.com/vinceliuice/Orchis-theme.git
-	cd Orchis-theme
-	./install.sh --tweaks macos
-	rm -rf $HOME/Downloads/Tela*
-	rm -rf $HOME/Downloads/Orchis*
+	cd $HOME/Downloads ; 	git clone https://github.com/vinceliuice/Orchis-theme.git
+	cd Orchis-theme ; 	./install.sh --tweaks macos
 }
 
 # Function to remove bloatware
@@ -97,6 +95,7 @@ install_apt_packages
 install_oh_my_bash
 install_homebrew_packages
 install_ble_sh
+install_repo
 install_flatpak
 install_gdm_settings
 install_snap_store
