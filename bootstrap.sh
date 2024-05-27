@@ -71,7 +71,7 @@ install_cht_sh() {
 	sudo chmod +x /usr/local/bin/cht.sh
 }
 
-# Function to install tmux plugins and themes
+# Function to install themes
 install_themes() {
 	cd $HOME/Downloads
 	wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/Hack.zip
