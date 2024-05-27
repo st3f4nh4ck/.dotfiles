@@ -7,7 +7,7 @@ remove_bloat() {
 	sudo apt purge gnome-games transmission libreoffice* -y && sudo apt autoremove -y && sudo apt autoclean -y
 }
 
-$remove_bloat
+remove_bloat
 
 
 # Function to install apt packages
@@ -18,7 +18,7 @@ install_apt_packages() {
 	sudo apt install -y $APT_PACKAGES
 }
 
-$install_apt_packages
+install_apt_packages
 
 
 
@@ -27,7 +27,7 @@ install_oh_my_bash() {
 	bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 }
 
-$install_oh_my_bash
+install_oh_my_bash
 
 
 
@@ -41,7 +41,7 @@ install_homebrew_packages() {
 	brew install $HOMEBREW_PACKAGES
 }
 
-$install_homebrew_packages
+install_homebrew_packages
 
 
 # Function to install ble.sh
@@ -51,7 +51,7 @@ install_ble_sh() {
 	echo 'source ~/.local/share/blesh/ble.sh' >>~/.bashrc
 }
 
-$install_ble_sh
+install_ble_sh
 
 
 # Function to pull git repo
@@ -61,7 +61,7 @@ install_repo() {
 	stow $HOME/.dotfiles .
 }
 
-$install_repo
+install_repo
 
 
 # Function to install GDM Settings to change login wallpaper
@@ -69,7 +69,7 @@ install_gdm_settings() {
 	flatpak install io.github.realmazharhussain.GdmSettings org.onlyoffice.desktopeditors org.gnome.World.PikaBackup io.gitlab.zehkira.Monophony io.github.mimbrero.WhatsAppDesktop org.chromium.Chromium org.gnome.Solanum org.qbittorrent.qBittorrent io.github.hvdwofl.jExifToolGUI com.belmoussaoui.Obfuscate net.sourceforge.Pdfedit
 }
 
-$install_gdm_settings
+install_gdm_settings
 
 
 # Function to install Snap Store
@@ -78,7 +78,7 @@ install_snap_store() {
 	sudo snap install core && sudo snap install snap-store && sudo snap install csbooks
 }
 
-$install_snap_store
+install_snap_store
 
 
 # Function to install VirtualBox
@@ -89,7 +89,7 @@ install_virtualbox() {
 	sudo apt install virtualbox-7.0 -y
 }
 
-$install_virtualbox
+install_virtualbox
 
 # Function to install VBox Guest Extension
 install_vbox_guest_extension() {
@@ -100,7 +100,7 @@ install_vbox_guest_extension() {
 	sudo usermod -aG vboxusers $USER
 }
 
-$install_vbox_guest_extension
+install_vbox_guest_extension
 
 
 # Function to download fonts & install themes
@@ -118,7 +118,7 @@ install_themes() {
 	./install.sh --tweaks macos
 }
 
-$install_themes
+install_themes
 
 
 #update PATH
