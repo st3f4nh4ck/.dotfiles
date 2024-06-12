@@ -225,7 +225,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 source ~/.local/share/blesh/ble.sh
 
-export PATH=$PATH:/usr/sbin:/usr/local/bin:/opt:/home/d4rkb4sh8/.local/bin:/home/d4rkb4sh8/go/bin
+export PATH=$PATH:/usr/sbin:/usr/local/bin:/opt:/home/d4rkb4sh8/.local/bin:/home/d4rkb4sh8/go/bin:/home/d4rkb4sh8/.cargo/bin
 
 export PAGER=most
 
